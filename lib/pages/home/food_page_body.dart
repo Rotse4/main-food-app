@@ -6,7 +6,6 @@ import 'package:food_delivery/routes/route_helper.dart';
 import 'package:food_delivery/widgets/big_text.dart';
 import 'package:food_delivery/widgets/small_text.dart';
 import 'package:get/get.dart';
-
 import '../../api/app_column.dart';
 import '../food/popular_food_detail.dart';
 import '../../models/products_model.dart';
@@ -224,7 +223,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     } else {
       var currScale = 0.8;
       matrix = Matrix4.diagonal3Values(1, currScale, 1)
-        ..setTranslationRaw(0, _height * (1 - _scaleFactor), 1);
+        ..setTranslationRaw(0, _height * (1 - _scaleFactor)/2, 1);
     }
     return Transform(
       transform: matrix,
